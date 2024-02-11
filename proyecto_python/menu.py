@@ -52,7 +52,7 @@ while (contador != 3):
             horarioprofe1= str (input("ingresa hora de inicio"))
             horarioprofe2= str (input("ingresa hora de finalización"))
         if decisiondetrainers ==2:
-            print ("noshe")
+            print ("noche")
     if cargo==3:
         print("--------------------------")
         print("1.-10 puntos")
