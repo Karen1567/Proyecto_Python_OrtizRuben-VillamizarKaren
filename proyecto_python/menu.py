@@ -58,7 +58,8 @@ while (contador != 3):
         print("1.-10 puntos")
         print("------------------------- ")
         break
+    
          
     if cargo==4:
         break
-    
+
