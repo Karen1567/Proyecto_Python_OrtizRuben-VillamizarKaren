@@ -30,7 +30,7 @@ while (contador != 3):
             decisioncamper = int(input("elige"))
             print("--------------------------")
             if (decisioncamper==1): 
-                identificacion = int(input("ingresa el numero de identificación"))
+                identificacion = int(input("ingresa el numero de identificación")) #Al inicio debes indicar donde quieres ingresar la informacion en  el JSON
                 nombre = str(input("ingresa el nombre"))
                 apellido1 = str(input("ingresa el primer apellido: "))
                 apellido2 = str(input("ingresa el segundo apellido: "))
@@ -38,9 +38,13 @@ while (contador != 3):
                 telefono1 = int(input("ingresa el telefono celular: "))
                 telefono2 = int(input("ingresa el telefono fijo: "))
                 edad = int(input("ingresa la edad: "))
-                if edad<18:
-                    acudiente = str(input("ingresa el acudiente: "))
-            if (decisioncamper==2):
+                if edad > 16 and edad < 27:
+                    if edad <18  :
+                        acudiente = str(input("ingresa el acudiente: "))
+                else:
+                    print ("fuera de rango")
+                        
+            elif (decisioncamper==2):
                 decisiondecamper = str(input("ingresa el id del Camper: "))
                 nombre = str(input("ingresa el nombre actualizado: "))
                 apellido1 = str(input("ingresa el primer apellido actualizado: "))
@@ -51,9 +55,9 @@ while (contador != 3):
                 edad = str(input("ingresa la edad actualizado: "))
                 if (edad<18):
                         acudiente = str(input("ingresa el acudiente: "))
-            if (decisioncamper==3):
+            elif (decisioncamper==3):
                 notadeestudiante=str(input("ingresa el id del camper: "))
-            if (decisioncamper==4):
+            elif (decisioncamper==4):
                 matriculascamper=str(input("ingresa el id del camper: "))
     if cargo==2:
         print("--------------------------")
