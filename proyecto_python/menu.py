@@ -2,25 +2,29 @@ contador = 0
 categoria = {}
 while (contador != 3):
     print("--------------------------")
+    print("-------Bienvenido---------")
+    print("--------------------------")
     print("1.coordinador")
     print("2.trainer ")
     print("3.camper")
     print("4. salir")
     print("--------------------------")
-    cargo = int(input("elige"))
+    cargo = int(input("ingresa: "))
     if(cargo==1):
         print("--------------------------")
         print("1.Camper")
         print("2.Trainer")
         print("3.Rutas")
-        print("4.Salir")
+        print("4.notas")
+        print("5.inicio")
+        print("--------------------------")
 
         ingreso = int(input("elige"))
         if (ingreso == 1):
             print("--------------------------")
-            print("1.inscribir camper")
+            print("1.Inscribir camper")
             print("2.actualizar camper")
-            print("")
+            print("3.Actualizar camper")
             print("4.matricular camper")
 
             decisioncamper = int(input("elige"))
@@ -37,16 +41,16 @@ while (contador != 3):
                 if edad<18:
                     acudiente = str(input("ingresa el acudiente: "))
             if (decisioncamper==2):
-                decisiondecamper = str(input("escribe el id del camper: "))
-                nombre = str(input("ingresa el nombre: "))
-                apellido1 = str(input("ingresa el primer apellido: "))
-                apellido2 = str(input("ingresa el segundo apellido: "))
-                direccion = str(input("ingresa la direccion del camper: "))
-                telefono1 = str(input("ingresa el telefono celular: "))
-                telefono2 = str(input("ingresa el telefono fijo: "))
-                edad = str(input("ingresa la edad: "))
+                decisiondecamper = str(input("ingresa el id del Camper: "))
+                nombre = str(input("ingresa el nombre actualizado: "))
+                apellido1 = str(input("ingresa el primer apellido actualizado: "))
+                apellido2 = str(input("ingresa el segundo apellido actualizado: "))
+                direccion = str(input("ingresa la direccion del camper actualizado: "))
+                telefono1 = str(input("ingresa el telefono celular actualizado: "))
+                telefono2 = str(input("ingresa el telefono fijo actualizado: "))
+                edad = str(input("ingresa la edad actualizado: "))
                 if (edad<18):
-                    acudiente = str(input("ingresa el acudiente: "))
+                        acudiente = str(input("ingresa el acudiente: "))
             if (decisioncamper==3):
                 notadeestudiante=str(input("ingresa el id del camper: "))
             if (decisioncamper==4):
