@@ -15,6 +15,8 @@ def guardar_datos(data):
 
 # Función para crear un nuevo objeto
 def crear_camper():
+    with open('creacion_de_datos.json','r')as proceso1:
+        creacion_de_datos = json.load(proceso1)
     identificacion = int(input("ingresa el numero de identificación")) #Al inicio debes indicar donde quieres ingresar la informacion en  el JSON
     nombre = str(input("ingresa el nombre"))
     apellido1 = str(input("ingresa el primer apellido: "))
@@ -29,13 +31,8 @@ def crear_camper():
             acudiente = str(input("ingresa el acudiente: "))
         else:
             print ("fuera de rango")
+    json_datos = json.dump()
     
-    data = cargar_datos()
-    nuevo_objeto = {'identificacoion':identificacion, 'nombre':nombre,'apellido1':apellido1, 'apellido2':apellido2, 'direccion':direccion, 'telefono1':telefono1, 'telefono2':telefono2, 'edad':edad, 'estado':estado, 'acudiente':acudiente}
-    data.append(nuevo_objeto)
-    guardar_datos(data)
-    print("Objeto creado con éxito.")
-
 # Función para leer todos los objetos
 def leer_camper():
     data = cargar_datos()

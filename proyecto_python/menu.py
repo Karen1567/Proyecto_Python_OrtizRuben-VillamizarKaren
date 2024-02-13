@@ -1,3 +1,4 @@
+import funciones as file
 contador = 0 
 categoria = {}
 while (contador != 3):
@@ -30,19 +31,8 @@ while (contador != 3):
             decisioncamper = int(input("elige"))
             print("--------------------------")
             if (decisioncamper==1): 
-                identificacion = int(input("ingresa el numero de identificación")) #Al inicio debes indicar donde quieres ingresar la informacion en  el JSON
-                nombre = str(input("ingresa el nombre"))
-                apellido1 = str(input("ingresa el primer apellido: "))
-                apellido2 = str(input("ingresa el segundo apellido: "))
-                direccion = str(input("ingresa la direccion del camper: "))
-                telefono1 = int(input("ingresa el telefono celular: "))
-                telefono2 = int(input("ingresa el telefono fijo: "))
-                edad = int(input("ingresa la edad: "))
-                if edad > 16 and edad < 27:
-                    if edad <18  :
-                        acudiente = str(input("ingresa el acudiente: "))
-                else:
-                    print ("fuera de rango")
+                file.crear_camper()
+                
                         
             elif (decisioncamper==2):
                 decisiondecamper = str(input("ingresa el id del Camper: "))
