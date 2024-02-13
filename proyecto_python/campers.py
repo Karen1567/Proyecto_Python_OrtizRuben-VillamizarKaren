@@ -15,18 +15,18 @@ class CampersApp:
 
     def save_data(self):
         with open(self.data_file, 'w') as file:
-            json.dump(self.campers_data, file, indent=2)
+            json.dump(self.campers_data, file, indent=10)
 
-    def create_camper(self, name, age):
-        new_camper = {'name': name, 'age': age}
+    def create_camper(self, identificacion, nombre, apellido1, apellido2, direccion, telefono1, telefono2, edad, estado,acudiente):
+        new_camper = {'identificacoion':identificacion, 'nombre':nombre,'apellido1':apellido1, 'apellido2':apellido2, 'direccion':direccion, 'telefono1':telefono1, 'telefono2':telefono2, 'edad':edad, 'estado':estado, 'acudiente':acudiente}
         self.campers_data['campers'].append(new_camper)
-        self.save_data()
-        print(f"Camper {name} creado con éxito.")
+        self.save_data()    
+        print(f"Camper {identificacion, nombre, apellido1, apellido2, direccion, telefono1, telefono2, edad, estado, acudiente}creado con éxito.")
 
     def read_campers(self):
         campers = self.campers_data['campers']
         for camper in campers:
-            print(f"Nombre: {camper['name']}, Edad: {camper['age']}")
+            print(f"Identificacion:{camper['identificacion']}, Nombre: {camper['nombre']}, Apellido 1:{camper['apellido1']}, Apellido2:{camper['apellido2']}, Direccion:{camper['direccion']}, Telefono1:{camper['telefono1']}, Telefono2:{camper['telefono2']}, Edad: {camper['edad']}, Estado: {camper['estado']}, Acudiente: {camper['acudiente']}")
 
     def update_camper(self, name, new_age):
         campers = self.campers_data['campers']
@@ -52,16 +52,16 @@ class CampersApp:
 app = CampersApp('campers_data.json')
 
 # Crear un nuevo camper
-app.create_camper('Juan', 25)
+app.create_camper()
 
 # Mostrar todos los campers
 app.read_campers()
 
 # Actualizar la edad de un camper
-app.update_camper('Juan', 26)
+app.update_camper()
 
 # Eliminar un camper
-app.delete_camper('Juan')
+app.delete_camper()
 
 # Mostrar campers después de eliminar
 app.read_campers()
