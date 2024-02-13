@@ -1,10 +1,12 @@
-import funciones as file
+import json
+import os
+import campers_CRUD
 contador = 0 
 categoria = {}
 while (contador != 3):
-    print("--------------------------")
-    print("-------Bienvenido---------")
-    print("--------------------------")
+    print("*-------------------------*")
+    print("*------Bienvenido---------*")
+    print("*-------------------------*")
     print("1.coordinador")
     print("2.trainer ")
     print("3.camper")
