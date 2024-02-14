@@ -1,0 +1,47 @@
+[
+    {
+        "identificacion": 1,
+        "nombre": "1",
+        "apellido1": "1",
+        "apellido2": "1",
+        "direccion": "1",
+        "telefono1": 1,
+        "telefono2": 1,
+        "edad": 1,
+        "estado": "1"
+    },
+    {
+        "identificacion": 109749645,
+        "nombre": "Karen Daniela",
+        "apellido1": "Qui\u00f1onez ",
+        "apellido2": "Villamizar",
+        "direccion": "Man I casa 14",
+        "telefono1": 3214810675,
+        "telefono2": 6402762,
+        "edad": 16,
+        "estado": "matriculada"
+    },
+    {
+        "identificacion": 1,
+        "nombre": "",
+        "apellido1": "1",
+        "apellido2": "1",
+        "direccion": "1",
+        "telefono1": 1,
+        "telefono2": 1,
+        "edad": 1,
+        "estado": "11"
+    },
+    {
+        "identificacion": 12345678,
+        "nombre": "karen",
+        "apellido1": "quimo",
+        "apellido2": "villa",
+        "direccion": "man -i cas",
+        "telefono1": 32156478,
+        "telefono2": 6405278,
+        "edad": 16,
+        "estado": "matricualado"
+    },
+    {
+        "id": 
