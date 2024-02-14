@@ -24,27 +24,27 @@ while (contador != 3):
         if (ingreso == 1):
             print("--------------------------")
             print("1.Inscribir camper")
-            print("2.mostrar lista")
-            print("3.Actualizar camper")
-            print("4.matricular camper")
-
+            print("2.Actualizar camper")
+            print("3.matricular camper")
+            print("4.cambiar estado camper")
             decisioncamper = int(input("elige"))
             print("--------------------------")
+            
             if (decisioncamper==1): 
                 file.crear_camper()
-                
-                        
+
             elif (decisioncamper==2):
-                file.leer_camper()
-                decisiondecamper = str(input("ingresa el id del Camper: "))
-                nombre = str(input("ingresa el nombre actualizado: "))
-                apellido1 = str(input("ingresa el primer apellido actualizado: "))
-                apellido2 = str(input("ingresa el segundo apellido actualizado: "))
-                direccion = str(input("ingresa la direccion del camper actualizado: "))
-                telefono1 = str(input("ingresa el telefono celular actualizado: "))
-                telefono2 = str(input("ingresa el telefono fijo actualizado: "))
-                edad = str(input("ingresa la edad actualizado: "))
-                acudiente = str(input("ingresa el acudiente: "))
+                file.actualizar_camper()
+
+                #decisiondecamper = str(input("ingresa el id del Camper: "))
+                #nombre = str(input("ingresa el nombre actualizado: "))
+                #apellido1 = str(input("ingresa el primer apellido actualizado: "))
+                #apellido2 = str(input("ingresa el segundo apellido actualizado: "))
+                #direccion = str(input("ingresa la direccion del camper actualizado: "))
+                #telefono1 = str(input("ingresa el telefono celular actualizado: "))
+                #telefono2 = str(input("ingresa el telefono fijo actualizado: "))
+                #edad = str(input("ingresa la edad actualizado: "))
+                #acudiente = str(input("ingresa el acudiente: "))
             elif (decisioncamper==3):
                 notadeestudiante=str(input("ingresa el id del camper: "))
             elif (decisioncamper==4):
@@ -57,7 +57,7 @@ while (contador != 3):
             decisionRuta = int(input("Que desea realizar con las rutas? "))
             if (decisionRuta == 1):
                 print("-"*80)
-                print("Para agregar la nueva ruta indiquenos la informacion de los modulos. ")
+                print("Para agregar la nueva r uta indiquenos la informacion de los modulos. ")
                 print("-"*80)
                 print ("a. Introducción a la algoritmia.")
                 print ("b. PSeInt")
