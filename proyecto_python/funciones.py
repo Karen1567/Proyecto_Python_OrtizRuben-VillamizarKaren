@@ -1,3 +1,5 @@
+
+import os 
 import json
 
 #FUNCION PARA CARGAR LOS DATOS DE LOS CAMPERS QUE YA ESTAN
@@ -64,8 +66,8 @@ def guardar_datos(lstPersonal, ruta):
 
 # Función para crear un nuevo objeto
 def crear_camper():
-    identificacion = str(input("ingresa el numero de identificación")) #Al inicio debes indicar donde quieres ingresar la informacion en  el JSON
-    nombre = str(input("ingresa el nombre"))
+    identificacion = str(input("ingresa el numero de identificación: ")) #Al inicio debes indicar donde quieres ingresar la informacion en  el JSON
+    nombre = str(input("ingresa el nombre: "))
     apellido1 = str(input("ingresa el primer apellido: "))
     apellido2 = str(input("ingresa el segundo apellido: "))
     direccion = str(input("ingresa la direccion del camper: "))
@@ -134,3 +136,9 @@ def agregarRuta(infModulos, nombreRuta):
     guardar_datos(rutas,ruta);
 
 
+# Funcion para limpiar pantalla
+def limpiar_pantalla():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
