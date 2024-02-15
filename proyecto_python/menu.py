@@ -110,10 +110,10 @@ while (contador != 3):
             print ()
             file.limpiar_pantalla()
     if cargo==3:
+        print("           ==================================          ")
+        print("           *    HEY! NO Tienes Accesso      *          ")
+        print("           ==================================          ")
+        input("Presiona Cualquier boton para volver al menu Inicio:  ")
         file.limpiar_pantalla()
-        print("==================================")
-        print("*    HEY! NO Tienes Accesso      *")
-        print("==================================")
     if cargo==4:
         break
-
