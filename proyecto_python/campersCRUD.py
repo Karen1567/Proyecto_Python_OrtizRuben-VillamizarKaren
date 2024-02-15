@@ -109,21 +109,6 @@ def actualizar_camper():
             return
     
     print(f"No se encontró el objeto con el nombre {nombre_a_actualizar}.")
-
-# Función para eliminar un objeto por nombre
-def eliminar_objeto():
-    nombre_a_eliminar = input("Ingrese el nombre del objeto a eliminar: ")
-    data = cargar_datos()
-
-    for obj in data:
-        if obj['nombre'] == nombre_a_eliminar:
-            data.remove(obj)
-            guardar_datos(data)
-            print("Objeto eliminado con éxito.")
-            return
-    
-    print(f"No se encontró el objeto con el nombre {nombre_a_eliminar}.")
-
 # PARA LAS RUTAS
     ## AGREGAR RUTA
 def agregarRuta(infModulos, nombreRuta):

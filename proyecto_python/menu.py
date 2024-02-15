@@ -17,7 +17,7 @@ while (contador != 3):
         print("*    Bienvenido Coordinador     *")
         print("=================================")
         print(" 1.Campers CRUD")
-        print(" 2.Trainers CRUD")
+        print(" 2.Trainers")
         print(" 3.Rutas de aprendisaje")
         print(" 4.Notas CRUD")
         print(" 5.Volver al Inicio")
