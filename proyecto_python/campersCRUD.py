@@ -67,21 +67,31 @@ def guardar_datos(lstPersonal, ruta):
 # Función para crear un nuevo objeto
 def crear_camper():
     identificacion = str(input("ingresa el numero de identificación: ")) #Al inicio debes indicar donde quieres ingresar la informacion en  el JSON
-    nombre = str(input("ingresa el nombre: "))
-    apellido1 = str(input("ingresa el primer apellido: "))
-    apellido2 = str(input("ingresa el segundo apellido: "))
-    direccion = str(input("ingresa la direccion del camper: "))
-    telefono1 = str(input("ingresa el telefono celular: "))
-    telefono2 = str(input("ingresa el telefono fijo: "))
-    edad = str(input("ingresa la edad: "))
-    estado = str(input("ingrese el estado actual: "))
-    acudiente = str(input("ingresa el acudiente: "))
+    nombre = str(input(" ingresa el nombre: "))
+    apellido1 = str(input(" ingresa el primer apellido: "))
+    apellido2 = str(input(" ingresa el segundo apellido: "))
+    direccion = str(input(" ingresa la direccion del camper: "))
+    telefono1 = str(input(" ingresa el telefono celular: "))
+    telefono2 = str(input(" ingresa el telefono fijo: "))
+    edad = str(input(" ingresa la edad: "))
+    estado = str(input(" ingrese el estado actual: "))
+    acudiente = str(input(" ingresa el acudiente: "))
     data = cargar_datos("proyecto_python/data.json")
     id = len(data) + 1;
-    nuevo_objeto = {"id": id, 'identificacion':identificacion, 'nombre':nombre,'apellido1':apellido1, 'apellido2':apellido2, 'direccion':direccion, 'telefono1':telefono1, 'telefono2':telefono2, 'edad':edad, 'estado':estado, 'acudiente':acudiente}
+    nuevo_objeto = {"id": id, 
+                    'identificacion':identificacion,
+                    'nombre':nombre,
+                    'apellido1':apellido1,
+                    'apellido2':apellido2,
+                    'direccion':direccion,
+                    'telefono1':telefono1,
+                    'telefono2':telefono2,
+                    'edad':edad,
+                    'estado':estado,
+                    'acudiente':acudiente}
     data.append(nuevo_objeto)
     guardar_datos(data, 'proyecto_python/data.json')
-  
+    
 # Función para leer todos los objetos
 def leer_camper():
     with open('datos.json', 'r') as archivo:
@@ -94,21 +104,12 @@ def leer_camper():
         print("No hay Campers para mostrar.")
 
 # Función para actualizar un objeto por nombre
-def actualizar_camper():
-    nombre_a_actualizar = input("Ingrese el nombre del Camper a actualizar: ")
-    data = cargar_datos()
-
-    for act_camper in data:
-        if act_camper['nombre'] == nombre_a_actualizar:
-            nuevo_nombre = input("Ingrese el nuevo nombre: ")
-            nueva_edad = int(input("Ingrese la nueva edad: "))
-            act_camper['nombre'] = nuevo_nombre
-            act_camper['edad'] = nueva_edad
-            guardar_datos(data)
-            print("Objeto actualizado con éxito.")
-            return
-    
-    print(f"No se encontró el objeto con el nombre {nombre_a_actualizar}.")
+def buscar_y_actualizar_camper(json_data, id_buscado, nuevos_datos):
+    for data in json_data:
+        if data.get("id") == id_buscado:
+            data.update(nuevos_datos)
+            return True
+    return False    
 # PARA LAS RUTAS
     ## AGREGAR RUTA
 def agregarRuta(infModulos, nombreRuta):

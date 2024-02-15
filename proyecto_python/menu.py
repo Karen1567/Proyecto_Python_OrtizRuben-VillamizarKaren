@@ -36,14 +36,14 @@ while (contador != 3):
             print("-----------------------------")
             file.limpiar_pantalla()
             if (decisioncamper==1): 
-                print("|===============================|")
-                print("|      Datos Nuevo Camper       |")
-                print("|===============================|")
+                print("===================================================")
+                print("*               Datos Nuevo Camper                *")
+                print("===================================================")
                 file.crear_camper()
                 file.limpiar_pantalla()
 
             elif (decisioncamper==2):
-                file.actualizar_camper()
+                file.buscar_y_actualizar_camper()
                 file.limpiar_pantalla()
                 
             elif (decisioncamper==3):
