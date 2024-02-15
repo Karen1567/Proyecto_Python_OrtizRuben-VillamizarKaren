@@ -1,26 +1,26 @@
-import funciones as file
+import campersCRUD as file
 contador = 0 
 categoria = {}
 while (contador != 3):
-    print("============================")
-    print("*       Bienvenido          *")
-    print("============================")
+    print("=============================================")
+    print("*   Bienvenido a Base de Datos Campusands   *")
+    print("=============================================")
     print(" 1.coordinador")
     print(" 2.trainer ")
     print(" 3.camper")
-    print(" 4. salir")
-    print("------------------------------")
-    cargo = int(input("Ingresa: "))
+    print(" 4.salir")
+    print("---------------------------------------------")
+    cargo = int(input("Selecciona tu Rol: "))
     file.limpiar_pantalla()
     if(cargo==1):
         print("=================================")
         print("*    Bienvenido Coordinador     *")
         print("=================================")
-        print(" 1.Camper")
-        print(" 2.Trainer")
-        print(" 3.Rutas")
-        print(" 4.notas")
-        print(" 5.inicio")
+        print(" 1.Campers CRUD")
+        print(" 2.Trainers CRUD")
+        print(" 3.Rutas de aprendisaje")
+        print(" 4.Notas CRUD")
+        print(" 5.Volver al Inicio")
         print("--------------------------")
         ingreso = int(input("Elige: "))
         file.limpiar_pantalla()
@@ -28,8 +28,8 @@ while (contador != 3):
             print("--------------------------")
             print(" 1.Inscribir camper")
             print(" 2.Actualizar camper")
-            print(" 3.matricular camper")
-            print(" 4.cambiar estado camper")
+            print(" 3.Matricular camper")
+            print(" 4.Cambiar estado camper")
             print(" 5.Volver al Inicio")
             print("---------------------------")
             decisioncamper = int(input("Elige: "))
@@ -98,6 +98,7 @@ while (contador != 3):
         print("===================================")
         print("1.Ingresar Nuevo horario")
         print("2.Ver Horarios ")
+        print("3.Volver al Inicio")
         print("---------------------------")
         decisiondetrainers = int(input("Selecciona una opcion #: "))
         file.limpiar_pantalla()
@@ -107,14 +108,12 @@ while (contador != 3):
             file.limpiar_pantalla()
         if decisiondetrainers == 2:
             print ()
-
+            file.limpiar_pantalla()
     if cargo==3:
+        file.limpiar_pantalla()
         print("==================================")
         print("*    HEY! NO Tienes Accesso      *")
         print("==================================")
-        break
-    
-         
     if cargo==4:
         break
 

@@ -48,7 +48,7 @@ def guardar_datos(lstPersonal, ruta):
         return False
     
     try:
-        json.dump(lstPersonal, fd)
+        json.dump(lstPersonal, fd, indent=4)
     except Exception as e:
         print("Error al guardar la información del empleado.\n", e)
         input("Presione cualquier tecla para continuar\n")
@@ -133,7 +133,7 @@ def agregarRuta(infModulos, nombreRuta):
     }
     rutas = cargar_datos(ruta);
     rutas.append(rutaNew)
-    guardar_datos(rutas,ruta);
+    guardar_datos(rutas, ruta,);
 
 
 # Funcion para limpiar pantalla
